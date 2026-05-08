@@ -24,6 +24,6 @@ function mostrar_mensaje (){
  }
    <script>
     function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("dark-mode") ;
     }
   </script>

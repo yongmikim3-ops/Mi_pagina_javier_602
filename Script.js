@@ -22,3 +22,8 @@ function mostrar_mensaje (){
      mensaje.style.transform = "transformateY/(0)";
   }, 50);
  }
+   <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>

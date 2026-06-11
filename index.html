@@ -1,61 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi primera pagina web</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body> 
-    <header>
-        <h1>"Mi pagina personal"</h1>
-    </header>
-       
 
- <nav>
-     <a href="#sobre-mi">Sobre mi</a>
-     <a href="#proyecto pec">Proyecto Pec</a>
- </nav>
 
-<section id="sobre-mi"> 
-    <button onclick="da_click ()">Da click</button>
-    <button id="theme-toggle">Cambiar modo</button>
-     <button id="theme-toggle">wathsApp</button>
-    <p id="sobre_mi" style="display none;"></p>
-<h2>-Sobre mi</h2>
-<img src="img/DR. YASBET PADILLA.jpg" alt="" width="550" height="400">
-<p>M i nombre es Javier Primitivo Gomez Bernardo</p>
-<p> Soy estudiante del Cecyte EMsAD San Antonino El alto</p>
-<p>-Informacion personal</p>
-<p> Soy estudiante del EMSAD 35</p>
-<P>Estoy cursando el 6to semestre</P>
-<p>Estoy a unos meses de culminar mi CECyTE</p>
-</section>
 
-<section id="proyecto pec">
-<H2>Proyecto PEC</H2>
-<button onclick="mostrar_mensaje ()">mostrarmensaje</button>
-<p id="mensaje"></p>
-<img src="img/BANNER.png" alt="" width="550" height="300">
-<h2> "Huellas: Cuidado animal y salud comunitaria</h2>
-<p>Este proyecto va a tratar sobre nuestras mascotas</p>
-<p> Estamos haciendo carteles entre otras cosas para 
-    promover el cuidado de nuestras mascotas</p>
-<p> Asi vamos a explicar y dar a conocer nuestros puntos de vista para dar a conocer este proyecto.</p>
-</section>
+<body>
+  <header>
+    <h1>Mi Página Personal</h1>
+  </header>
 
-    <footer>
-        <p>2026 - Javier</p>
-    </footer> 
-    <script src="Script.js"></script>
-    <script src="Script.js"></script> 
+   <nav>
+      <a href="#Sobre_mí">Sobre mí</a>
+      <a href="#Proyecto_PEC">Proyecto PEC</a>
+      </nav>
+
+  <section id="Sobre_mí">
+
+    <h2>Sobre mí</h2>
+
+<p id="mensaje1" class="mensaje" style="display:none;"></p> 
+    <button data-target="mensaje1" onclick="MostrarMensaje1()">Mostrar mensaje Sobre mi</button>
+
+    <p>Hola, soy Javier Primitivo Gomez Bernardo. Me apasiona las motos y todo lo relacionado con ello.
+      Disfruto convivir y compartir con mis compañeros</p>
+    <img src="img/tarjeta.png" alt="foto personal">
+  </section>
+
+   <section id="Proyecto_PEC">
+    <h2>Proyecto PEC Huellas: cuidado animal y salud comunitaria</h2>
+
+    <p id="mensaje" class="mensaje" style="display:none;"></p> 
+    <button data-target="mensaje" onclick="MostrarMensaje()">Mostrar mensaje Sobre El PEC</button>
+
+    <p>Este proyecto busca concientizar sobre la importancia del cuidado de los animales y la salud comunitaria.
+      A través de carteles, charlas y actividades escolares, promovemos el respeto hacia los animales y la
+      responsabilidad en su alimentación, higiene y bienestar.</p>
+    <p>Mi objetivo es que la ciencia y la educación se conviertan en herramientas para mejorar la vida de nuestra
+      comunidad.</p>
+    
+    <div class="pec-banner">
+        <p>🐾 Huellas que cuidan, comunidad que crece 🌱</p>
+    </div>
+
+    <img src="img/Campaña de esterilizacion (1).png" alt="Personas conviviendo con sus mascotas">
+
+    <button data-target="pec-video" onclick="MostrarVideoPec()">Ver video sobre cuidado animal</button>
+    <div id="pec-video" class="mensaje" style="display:none;">
+      <div class="video-wrapper">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/In6D4sgZJ7M?si=kRLoFSJJM-lrKxQ_"
+          title="Video sobre cuidado animal"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="pec-card">
+        <h3>🐶 Adopción responsable</h3>
+        <p>Fomentamos la adopción de perritos y gatitos, asegurando que cada familia esté preparada para brindarles amor y cuidados.</p>
+    </div>
+
+    <div class="pec-card">
+        <h3>🩺 Salud comunitaria</h3>
+        <p>Organizamos campañas de vacunación y esterilización para mejorar la calidad de vida de nuestras mascotas y prevenir enfermedades.</p>
+    </div>
+
+    <div class="pec-card">
+        <h3>🌱 Educación y respeto</h3>
+        <p>Promovemos actividades escolares que enseñan a los niños la importancia de cuidar a los animales y al medio ambiente.</p>
+    </div>
+
+    <!-- Galería de Perritos y Gatitos -->
+    <div class="gallery-section">
+      <h2>🐶😺 Galería de Perritos y Gatitos 🐱🐕</h2>
+      <p>¡Mira estos adorables amigos que esperan un hogar lleno de amor!</p>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+        <div class="carousel">
+          <div class="slides">
+            <div class="slide active">
+              <img src="img/cuidado animal.jpg" alt="Mascotas felices en comunidad">
+            </div>
+            <div class="slide">
+              <img src="img/Perro y gato.jpg" alt="Corazón de huellas">
+            </div>
+            <div class="slide">
+              <img src="img/gatos cool.jpg" alt="Perrito juguetón">
+            </div>
+            <div class="slide">
+              <img src="img/Kisses.jpg" alt="Gatito tierno">
+            </div>
+            <div class="slide">
+              <img src="img/descarga (4).jpg" alt="Camada de perritos">
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+        
+        <div class="carousel-indicators">
+          <span class="indicator active" onclick="currentSlide(1)"></span>
+          <span class="indicator" onclick="currentSlide(2)"></span>
+          <span class="indicator" onclick="currentSlide(3)"></span>
+          <span class="indicator" onclick="currentSlide(4)"></span>
+          <span class="indicator" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Preguntas frecuentes + Formulario -->
+    <div class="faq-form-section">
+      <h2>🐾 Preguntas frecuentes de cuidado animal</h2>
+      <p class="subtitle">Respuestas rápidas en formato acordeón.</p>
+
+      <!-- Acordeón usando el mismo sistema de toggleMensaje() -->
+      <div class="accordion">
+        <button class="accordion-btn" data-target="faq-1" onclick="toggleMensaje(this)">¿Qué debo dar de comer a mi mascota?</button>
+<div id="faq-1" class="mensaje" style="display:none;">Para alimentar a tu mascota, elige un alimento completo (balanceado) según su edad y tamaño. Ofrécele porciones controladas, agua fresca siempre y evita dar comida “humana” (como chocolate, cebolla, uvas) porque puede ser peligrosa.</div>
+
+        <button class="accordion-btn" data-target="faq-2" onclick="toggleMensaje(this)">¿Cada cuánto debo llevarla al veterinario?</button>
+<div id="faq-2" class="mensaje" style="display:none;">Como guía general: lleva a tu mascota al veterinario al menos 1 vez al año para chequeo. Los cachorros y gatitos suelen requerir visitas más frecuentes (por vacunas y control). Si notas señales de enfermedad (bajo apetito, vómitos, diarrea, decaimiento), consulta de inmediato.</div>
+
+        <button class="accordion-btn" data-target="faq-3" onclick="toggleMensaje(this)">¿Cómo mantener la higiene?</button>
+<div id="faq-3" class="mensaje" style="display:none;">La higiene es clave: cepilla el pelo (según el tipo de pelaje), baña solo cuando sea necesario con productos adecuados, mantén limpios sus cuencos, limpia sus orejas si tu veterinario lo indica y cepilla sus dientes si es posible. Para perros, revisa también uñas y almohadillas.</div>
+
+        <button class="accordion-btn" data-target="faq-4" onclick="toggleMensaje(this)">¿Por qué son importantes las vacunas y la desparasitación?</button>
+<div id="faq-4" class="mensaje" style="display:none;">Las vacunas protegen contra enfermedades graves y contagiosas. La desparasitación evita parásitos internos y externos que pueden afectar el bienestar y también la salud de las personas que conviven. El calendario exacto depende de la edad, el estado de salud y el tipo de mascota; tu veterinario te lo define.</div>
+
+        <button class="accordion-btn" data-target="faq-5" onclick="toggleMensaje(this)">¿Qué debo hacer si mi mascota se enferma?</button>
+<div id="faq-5" class="mensaje" style="display:none;">Si tu mascota se enferma, observa su comportamiento y síntomas. No la automediques. Asegura agua, manténla en un lugar tranquilo y busca atención veterinaria si hay señales como vómitos persistentes, sangre, dificultad para respirar, convulsiones o decaimiento fuerte.</div>
+      </div>
+
+      <div class="form-card">
+        <h3>📋 Cuéntame sobre tu mascota</h3>
+        <form id="mascotas-form" novalidate>
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required />
+
+          <div class="yesno-group">
+            <label>¿Tienes mascotas?</label>
+            <div class="radio-row">
+              <label class="radio-option">
+                <input type="radio" name="tieneMascotas" value="si" required /> Sí
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tieneMascotas" value="no" required /> No
+              </label>
+            </div>
+          </div>
+
+          <div id="mascotas-datos" class="pets-hidden">
+            <label for="cantidad">¿Cuántas mascotas tienes?</label>
+            <input id="cantidad" name="cantidad" type="number" min="1" placeholder="Ej: 2" required />
+
+            <label for="nombres">¿Cómo se llaman? (separa con comas)</label>
+            <textarea id="nombres" name="nombres" rows="3" placeholder="Ej: Luna, Max" required></textarea>
+
+            <div id="nombres-ayuda" class="help">Consejo: usa comas para separar los nombres.</div>
+          </div>
+
+          <button type="submit" class="submit-btn">Enviar</button>
+
+          <p id="form-mensaje-mascotas" class="form-mensaje" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <!-- Formulario de contacto -->
+      <div class="form-card contacto-card">
+        <h3>📨 Contáctanos</h3>
+        <form id="contacto-form" novalidate>
+          <label for="contacto-nombre">Nombre:</label>
+          <input id="contacto-nombre" name="contacto-nombre" type="text" placeholder="Escribe tu nombre" required />
+
+          <label for="contacto-email">Email:</label>
+          <input id="contacto-email" name="contacto-email" type="email" placeholder="tuemail@ejemplo.com" required />
+
+          <label for="contacto-mensaje">Mensaje:</label>
+          <textarea id="contacto-mensaje" name="contacto-mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+
+          <button type="submit" class="submit-btn">Enviar mensaje</button>
+
+          <p id="contacto-mensaje" class="form-mensaje" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>2026 - Mi nombre es Verónica Fabiola Marcos Marcos</p>
+    <p>Contacto: VeroFabiM6@gmail..com | Redes sociales: Facebook - Instagram</p>
+  </footer>
+
+  <!-- Botón de WhatsApp -->
+<a href="https://wa.me" class="whatsapp-btn" target="_blank">
+  <img src="img/icon whatsapp.jpg" alt="WhatsApp">
+</a>
+
+<script src="Script.js"> </script>
 </body>
+
 </html>
-
-<nav>
-    <a href="#"></a>
-</nav>
-
-
-

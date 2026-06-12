@@ -58,7 +58,7 @@ nav a:hover::after {
 /* Variables CSS para tema consistente */
 :root {
   --primary-blue: #013472;
-  --accent-pink: #19138e;
+--accent-pink: #0b4ecb;
   --light-cyan: #45e7ed;
   --gradient-bg: linear-gradient(135deg, #a3d2f9 0%, #a3c9f9 50%, #0f969a 100%);
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -528,6 +528,39 @@ button:active{
 /* ==========================
    FAQ + Formularios
    ========================== */
+
+.nav-cards{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin: 18px 0;
+}
+
+.nav-card{
+  flex: 1 1 250px;
+  padding: 18px 16px;
+  border-radius: 16px;
+  border: 2px solid rgba(1,52,114,0.18);
+  background: linear-gradient(135deg, rgba(69,231,237,0.18), rgba(11,78,203,0.12));
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  color:#013472;
+}
+
+.nav-card h3{
+  margin:0 0 8px;
+  font-size: 1.2rem;
+  color: var(--accent-pink);
+}
+
+.nav-card p{
+  margin:0;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px){
+  .nav-card{flex: 1 1 100%;}
+}
 
 .faq-form-section {
   margin-top: 20px;

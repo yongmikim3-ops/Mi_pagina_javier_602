@@ -9,7 +9,7 @@ header {
 
 /* Menú de navegación sticky con glassmorphism */
 nav {
-  background: rgba(249, 163, 201, 0.95);
+  background: rgba(163, 249, 247, 0.95);
   backdrop-filter: blur(15px);
   text-align: center;
   padding: 15px;
@@ -58,12 +58,12 @@ nav a:hover::after {
 /* Variables CSS para tema consistente */
 :root {
   --primary-blue: #013472;
-  --accent-pink: #e652c4;
+  --accent-pink: #19138e;
   --light-cyan: #45e7ed;
-  --gradient-bg: linear-gradient(135deg, #f9a3c9 0%, #a3c9f9 50%, #45e7ed 100%);
+  --gradient-bg: linear-gradient(135deg, #a3d2f9 0%, #a3c9f9 50%, #0f969a 100%);
   --glass-bg: rgba(255, 255, 255, 0.1);
   --shadow-soft: 0 8px 32px rgba(0,0,0,0.1);
-  --shadow-glow: 0 0 20px rgba(229, 82, 196, 0.5);
+  --shadow-glow: 0 0 20px rgba(82, 126, 229, 0.5);
 }
 
 /* Estilo general de la página - Modernizado */
@@ -186,7 +186,7 @@ h2 {
 
 /* Banner decorativo del Proyecto PEC */
 .pec-banner {
-  background: linear-gradient(90deg, #f9a3c9, #45e7ed);
+  background: linear-gradient(90deg, #2b28e9, #45e7ed);
   color: #013472;
   font-size: 1.2em;
   font-weight: bold;
@@ -236,7 +236,7 @@ h2 {
 }
 
 .pec-card h3 {
-  color: #e652c4;
+  color: #06107c;
   margin-bottom: 10px;
 }
 
@@ -254,7 +254,7 @@ h2 {
 }
 
 @keyframes blink {
-  from, to { border-color: blueviolet }
+  from, to { border-color: rgb(43, 226, 220) }
   50% { border-color: #013472; }
 }
 
@@ -273,7 +273,7 @@ h2 {
 button{
   padding: 10px 20px;
   font-size: 16px;
-  background-color: rgb(255, 144, 249);
+  background-color: rgb(144, 164, 255);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -460,7 +460,7 @@ button:active{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(229, 82, 196, 0.8);
+  background: rgba(82, 97, 229, 0.8);
   color: white;
   border: none;
   width: 50px;
@@ -595,7 +595,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: rgba(230, 82, 196, 0.65);
+  border-color: rgba(82, 85, 230, 0.65);
   box-shadow: 0 0 0 3px rgba(230, 82, 196, 0.15);
 }
 
